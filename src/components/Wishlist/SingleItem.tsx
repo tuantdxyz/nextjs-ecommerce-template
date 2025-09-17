@@ -75,7 +75,7 @@ const SingleItem = ({ item }) => {
 
       <div className="min-w-[265px]">
         <div className="flex items-center gap-1.5">
-          <svg
+          {/* <svg
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -96,19 +96,100 @@ const SingleItem = ({ item }) => {
               d="M1.04102 10C1.04102 5.05247 5.0518 1.04169 9.99935 1.04169C14.9469 1.04169 18.9577 5.05247 18.9577 10C18.9577 14.9476 14.9469 18.9584 9.99935 18.9584C5.0518 18.9584 1.04102 14.9476 1.04102 10ZM9.99935 2.29169C5.74215 2.29169 2.29102 5.74283 2.29102 10C2.29102 14.2572 5.74215 17.7084 9.99935 17.7084C14.2565 17.7084 17.7077 14.2572 17.7077 10C17.7077 5.74283 14.2565 2.29169 9.99935 2.29169Z"
               fill="#F23030"
             />
-          </svg>
+          </svg> */}
 
-          <span className="text-red"> Out of Stock </span>
+          {/* <span className="text-red"> Out of Stock </span> */}
+          {item.status === "available" ? (
+            <>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                className="mr-1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="9" cy="9" r="9" fill="#22C55E" />
+                <path
+                  d="M5.5 9.5L8 12L12.5 7.5"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span className="text-green">In Stock</span>
+            </>
+          ) : (
+            <>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                className="mr-1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="9" cy="9" r="9" fill="#EF4444" />
+                <text
+                  x="9"
+                  y="13"
+                  textAnchor="middle"
+                  fontSize="10"
+                  fill="white"
+                  fontWeight="bold"
+                  fontFamily="Arial"
+                >!</text>
+              </svg>
+              <span className="text-red">Out of Stock</span>
+            </>
+          )}
         </div>
       </div>
 
       <div className="min-w-[150px] flex justify-end">
-        <button
-          onClick={() => handleAddToCart()}
-          className="inline-flex text-dark hover:text-white bg-gray-1 border border-gray-3 py-2.5 px-6 rounded-md ease-out duration-200 hover:bg-blue hover:border-gray-3"
-        >
-          Add to Cart
-        </button>
+        {item.status === "available" ? (
+          <button
+            onClick={() => handleAddToCart()}
+            className="inline-flex justify-center items-center text-dark hover:text-white bg-gray-1 border border-gray-3 py-2.5 px-6 rounded-md ease-out duration-200 hover:bg-blue hover:border-gray-3 w-full"
+            style={{ minWidth: 150 }}
+          >
+            Add to Cart
+          </button>
+        ) : (
+          <div className="flex w-full min-w-[150px]">
+            <button
+              onClick={() => window.open("https://zalo.me/+84846179163", "_blank")}
+              className="inline-flex justify-center items-center py-2.5 px-6 rounded-md w-full group"
+              style={{ minWidth: 28 }}
+              // aria-label="Liên hệ Zalo"
+              type="button"
+            >
+              <Image
+                src="/images/icons/icons-zalo.svg"
+                alt="Zalo"
+                width={28}
+                height={28}
+                className="transition-transform duration-200 group-hover:scale-125"
+              />
+            </button>
+            <button
+              onClick={() => window.open("tel:+84846179163")}
+              className="inline-flex justify-center items-center py-2.5 px-6 rounded-md w-full group"
+              style={{ minWidth: 28 }}
+              // aria-label="Gọi điện"
+              type="button"
+            >
+              <Image
+                src="/images/icons/icons-call.svg"
+                alt="Gọi điện"
+                width={28}
+                height={28}
+                className="transition-transform duration-200 group-hover:scale-125"
+              />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

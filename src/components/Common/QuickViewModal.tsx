@@ -9,6 +9,7 @@ import Image from "next/image";
 import { usePreviewSlider } from "@/app/context/PreviewSliderContext";
 import { resetQuickView } from "@/redux/features/quickView-slice";
 import { updateproductDetails } from "@/redux/features/product-details";
+import { addItemToWishlist } from "@/redux/features/wishlist-slice";
 
 const QuickViewModal = () => {
   const { isModalOpen, closeModal } = useModalContext();
@@ -40,6 +41,20 @@ const QuickViewModal = () => {
 
     closeModal();
   };
+
+  const handleItemToWishList = () => {
+      dispatch(
+        addItemToWishlist({
+          id: product.id,
+          title: product.title,
+          price: product.price,
+          discountedPrice: product.discountedPrice,
+          quantity: 1,
+          imgs: product.imgs,
+          status: product.status,
+        })
+      );
+    };
 
   useEffect(() => {
     // closing modal while clicking outside
@@ -115,7 +130,7 @@ const QuickViewModal = () => {
 
                 <div className="relative z-1 overflow-hidden flex items-center justify-center w-full sm:min-h-[508px] bg-gray-1 rounded-lg border border-gray-3">
                   <div>
-                    <button
+                    {/* <button
                       onClick={handlePreviewSlider}
                       aria-label="button for zoom"
                       className="gallery__Image w-10 h-10 rounded-[5px] bg-white shadow-1 flex items-center justify-center ease-out duration-200 text-dark hover:text-blue absolute top-4 lg:top-8 right-4 lg:right-8 z-50"
@@ -135,7 +150,7 @@ const QuickViewModal = () => {
                           fill=""
                         />
                       </svg>
-                    </button>
+                    </button> */}
 
                     <Image
                       src={product?.imgs?.previews?.[activePreview]}
@@ -150,7 +165,7 @@ const QuickViewModal = () => {
 
             <div className="max-w-[445px] w-full">
               <span className="inline-block text-custom-xs font-medium text-white py-1 px-3 bg-green mb-6.5">
-                SALE 20% OFF
+                {product.sale}
               </span>
 
               <h3 className="font-semibold text-xl xl:text-heading-5 text-dark mb-4">
@@ -268,13 +283,13 @@ const QuickViewModal = () => {
                   </div>
 
                   <span>
-                    <span className="font-medium text-dark"> 4.7 Rating </span>
-                    <span className="text-dark-2"> (5 reviews) </span>
+                    <span className="font-medium text-dark"> {product.rating} Rating </span>
+                    <span className="text-dark-2"> ({product.reviews} reviews) </span>
                   </span>
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <svg
+                  {/* <svg
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -296,15 +311,36 @@ const QuickViewModal = () => {
                         <rect width="20" height="20" fill="white" />
                       </clipPath>
                     </defs>
-                  </svg>
+                  </svg> */}
 
-                  <span className="font-medium text-dark"> In Stock </span>
+                  {product.status === "available" ? (
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/images/icons/in-stock.svg"
+                        alt="In Stock"
+                        width={28}
+                        height={28}
+                        // className="transition-transform duration-200 group-hover:scale-125"
+                      />
+                      <span className="font-medium text-dark">In Stock</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/images/icons/out-of-stock.svg"
+                        alt="Out of Stock"
+                        width={28}
+                        height={28}
+                        // className="transition-transform duration-200 group-hover:scale-125"
+                      />
+                      <span className="font-medium text-red-500">Out of Stock</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has.
+                {product.description}
               </p>
 
               <div className="flex flex-wrap justify-between gap-5 mt-6 mb-7.5">
@@ -391,17 +427,60 @@ const QuickViewModal = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-4">
-                <button
+                {/* <button
                   disabled={quantity === 0 && true}
                   onClick={() => handleAddToCart()}
                   className={`inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark
                   `}
                 >
                   Add to Cart
-                </button>
+                </button> */}
+                {product.status === "available" ? (
+                  <button
+                    onClick={() => handleAddToCart()}
+                    className="inline-flex justify-center items-center text-dark hover:text-white bg-gray-1 border border-gray-3 py-2.5 px-6 rounded-md ease-out duration-200 hover:bg-blue hover:border-gray-3 w-full"
+                    style={{ minWidth: 150 }}
+                  >
+                    Add to Cart
+                  </button>
+                ) : (
+                  <div className="flex w-full min-w-[150px] gap-2">
+                    <button
+                      onClick={() => window.open("https://zalo.me/+84846179163", "_blank")}
+                      className="inline-flex justify-center items-center py-2.5 px-6 rounded-md flex-1 group"
+                      style={{ minWidth: 28 }}
+                      // aria-label="Liên hệ Zalo"
+                      type="button"
+                    >
+                      <Image
+                        src="/images/icons/icons-zalo.svg"
+                        alt="Zalo"
+                        width={48}
+                        height={48}
+                        className="transition-transform duration-200 group-hover:scale-125"
+                      />
+                    </button>
+                    <button
+                      onClick={() => window.open("tel:+84846179163")}
+                      className="inline-flex justify-center items-center py-2.5 px-6 rounded-md flex-1 group"
+                      style={{ minWidth: 28 }}
+                      // aria-label="Gọi điện"
+                      type="button"
+                    >
+                      <Image
+                        src="/images/icons/icons-call.svg"
+                        alt="Gọi điện"
+                        width={48}
+                        height={48}
+                        className="transition-transform duration-200 group-hover:scale-125"
+                      />
+                    </button>
+                  </div>
+                )}
 
-                <button
+                {/* <button
                   className={`inline-flex items-center gap-2 font-medium text-white bg-dark py-3 px-6 rounded-md ease-out duration-200 hover:bg-opacity-95 `}
+                  onClick={() => handleItemToWishList()}
                 >
                   <svg
                     className="fill-current"
@@ -419,7 +498,7 @@ const QuickViewModal = () => {
                     />
                   </svg>
                   Add to Wishlist
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

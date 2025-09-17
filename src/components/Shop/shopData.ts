@@ -1,141 +1,94 @@
 import { Product } from "@/types/product";
+
 const shopData: Product[] = [
   {
-    title: "Havit HV-G69 USB Gamepad",
+    id: 1,
+    title: "Candles Itaewon 55",
+    slug: "candles-itaewon-55",
     reviews: 15,
     price: 59.0,
     discountedPrice: 29.0,
-    id: 1,
+    description: "Nến thơm hương hoa nhẹ nhàng, thích hợp cho phòng ngủ.",
+    sale: "SALE 20% OFF",
+    rating: 4.7,
+    status: "available",
     imgs: {
       thumbnails: [
-        "/images/products/product-1-sm-1.png",
-        "/images/products/product-1-sm-2.png",
+        "/images/products/candles-bg-09.png",
+        "/images/products/candles-bg-10.png",
       ],
       previews: [
-        "/images/products/product-1-bg-1.png",
-        "/images/products/product-1-bg-2.png",
+        "/images/products/candles-bg-09.png",
+        "/images/products/candles-bg-10.png",
       ],
     },
   },
   {
-    title: "iPhone 14 Plus , 6/128GB",
+    id: 2,
+    title: "Candles Itaewon 56",
+    slug: "candles-itaewon-56",
     reviews: 5,
     price: 899.0,
     discountedPrice: 99.0,
-    id: 2,
+    description: "Nến thơm cao cấp, thời gian cháy lâu, an toàn cho sức khỏe.",
+    sale: "SALE 10% OFF",
+    rating: 4.2,
+    status: "available",
     imgs: {
       thumbnails: [
-        "/images/products/product-2-sm-1.png",
-        "/images/products/product-2-sm-2.png",
+        "/images/products/candles-bg-03.png",
+        "/images/products/candles-bg-04.png",
       ],
       previews: [
-        "/images/products/product-2-bg-1.png",
-        "/images/products/product-2-bg-2.png",
+        "/images/products/candles-bg-03.png",
+        "/images/products/candles-bg-04.png",
       ],
     },
   },
   {
-    title: "Apple iMac M1 24-inch 2021",
-    reviews: 5,
+    id: 3,
+    title: "Candles Itaewon 57",
+    slug: "candles-itaewon-57",
+    reviews: 8,
     price: 59.0,
     discountedPrice: 29.0,
-    id: 3,
+    description: "Nến thơm hương gỗ, tạo cảm giác thư giãn.",
+    sale: "SALE 15% OFF",
+    rating: 4.5,
+    status: "available",
     imgs: {
       thumbnails: [
-        "/images/products/product-3-sm-1.png",
-        "/images/products/product-3-sm-2.png",
+        "/images/products/candles-bg-13.png",
+        "/images/products/candles-bg-13.png",
       ],
       previews: [
-        "/images/products/product-3-bg-1.png",
-        "/images/products/product-3-bg-2.png",
+        "/images/products/candles-bg-13.png",
+        "/images/products/candles-bg-13.png",
       ],
     },
   },
   {
-    title: "MacBook Air M1 chip, 8/256GB",
+    id: 4,
+    title: "Candles Itaewon 58",
+    slug: "candles-itaewon-58",
     reviews: 6,
     price: 59.0,
     discountedPrice: 29.0,
-    id: 4,
+    description: "Nến thơm thiên nhiên, thích hợp làm quà tặng.",
+    sale: "SALE 5% OFF",
+    rating: 4.0,
+    status: "out of stock",
     imgs: {
       thumbnails: [
-        "/images/products/product-4-sm-1.png",
-        "/images/products/product-4-sm-2.png",
+        "/images/products/candles-bg-14.png",
+        "/images/products/candles-bg-14.png",
       ],
       previews: [
-        "/images/products/product-4-bg-1.png",
-        "/images/products/product-4-bg-2.png",
+        "/images/products/candles-bg-14.png",
+        "/images/products/candles-bg-14.png",
       ],
     },
   },
-  // {
-  //   title: "Apple Watch Ultra",
-  //   reviews: 3,
-  //   price: 99.0,
-  //   discountedPrice: 29.0,
-  //   id: 5,
-  //   imgs: {
-  //     thumbnails: [
-  //       "/images/products/product-5-sm-1.png",
-  //       "/images/products/product-5-sm-2.png",
-  //     ],
-  //     previews: [
-  //       "/images/products/product-5-bg-1.png",
-  //       "/images/products/product-5-bg-2.png",
-  //     ],
-  //   },
-  // },
-  // {
-  //   title: "Logitech MX Master 3 Mouse",
-  //   reviews: 15,
-  //   price: 59.0,
-  //   discountedPrice: 29.0,
-  //   id: 6,
-  //   imgs: {
-  //     thumbnails: [
-  //       "/images/products/product-6-sm-1.png",
-  //       "/images/products/product-6-sm-2.png",
-  //     ],
-  //     previews: [
-  //       "/images/products/product-6-bg-1.png",
-  //       "/images/products/product-6-bg-2.png",
-  //     ],
-  //   },
-  // },
-  // {
-  //   title: "Apple iPad Air 5th Gen - 64GB",
-  //   reviews: 15,
-  //   price: 59.0,
-  //   discountedPrice: 29.0,
-  //   id: 7,
-  //   imgs: {
-  //     thumbnails: [
-  //       "/images/products/product-7-sm-1.png",
-  //       "/images/products/product-7-sm-2.png",
-  //     ],
-  //     previews: [
-  //       "/images/products/product-7-bg-1.png",
-  //       "/images/products/product-7-bg-2.png",
-  //     ],
-  //   },
-  // },
-  // {
-  //   title: "Asus RT Dual Band Router",
-  //   reviews: 15,
-  //   price: 59.0,
-  //   discountedPrice: 29.0,
-  //   id: 8,
-  //   imgs: {
-  //     thumbnails: [
-  //       "/images/products/product-8-sm-1.png",
-  //       "/images/products/product-8-sm-2.png",
-  //     ],
-  //     previews: [
-  //       "/images/products/product-8-bg-1.png",
-  //       "/images/products/product-8-bg-2.png",
-  //     ],
-  //   },
-  // },
 ];
 
 export default shopData;

@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
 import Newsletter from "../Common/Newsletter";
@@ -7,7 +7,7 @@ import RecentlyViewdItems from "./RecentlyViewd";
 import { usePreviewSlider } from "@/app/context/PreviewSliderContext";
 import { useAppSelector } from "@/redux/store";
 
-const ShopDetails = () => {
+const ShopDetails = ({ product }) => {
   const [activeColor, setActiveColor] = useState("blue");
   const { openPreviewModal } = usePreviewSlider();
   const [previewImg, setPreviewImg] = useState(0);
@@ -75,16 +75,16 @@ const ShopDetails = () => {
 
   const colors = ["red", "blue", "orange", "pink", "purple"];
 
-  const alreadyExist = localStorage.getItem("productDetails");
-  const productFromStorage = useAppSelector(
-    (state) => state.productDetailsReducer.value
-  );
+  // const alreadyExist = localStorage.getItem("productDetails");
+  // const productFromStorage = useAppSelector(
+  //   (state) => state.productDetailsReducer.value
+  // );
 
-  const product = alreadyExist ? JSON.parse(alreadyExist) : productFromStorage;
+  // product = alreadyExist ? JSON.parse(alreadyExist) : productFromStorage;
 
-  useEffect(() => {
-    localStorage.setItem("productDetails", JSON.stringify(product));
-  }, [product]);
+  // useEffect(() => {
+  //   localStorage.setItem("productDetails", JSON.stringify(product));
+  // }, [product]);
 
   // pass the product here when you get the real data.
   const handlePreviewSlider = () => {

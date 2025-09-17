@@ -13,6 +13,7 @@ export const store = configureStore({
     cartReducer,
     wishlistReducer,
     productDetailsReducer,
+    wishlist: wishlistReducer,
   },
 });
 

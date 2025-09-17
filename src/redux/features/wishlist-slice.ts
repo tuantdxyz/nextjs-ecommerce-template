@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../store";
 
 type InitialState = {
   items: WishListItem[];
@@ -61,3 +62,5 @@ export const {
   removeAllItemsFromWishlist,
 } = wishlist.actions;
 export default wishlist.reducer;
+
+export const selectWishlistCount = (state: RootState) => state.wishlist.items.length;
