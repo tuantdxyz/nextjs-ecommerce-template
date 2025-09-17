@@ -9,6 +9,12 @@ export type Product = {
   sale: string;
   rating: number;
   status: "available" | "out of stock";
+  brand: string;
+  model: string;
+  size: string;
+  type: string;
+  specifications: string;
+  care: string;
   imgs?: {
     thumbnails: string[];
     previews: string[];

@@ -12,6 +12,12 @@ const shopData: Product[] = [
     sale: "SALE 20% OFF",
     rating: 4.7,
     status: "available",
+    brand: "Scanlested",
+    model: "Itaewon 55",
+    size: "100ml",
+    type: "Hương hoa nhài, hương hoa hồng.",
+    specifications: "Thành phần tự nhiên, cháy 30 giờ.",
+    care: "Đặt nơi khô ráo, tránh ánh nắng.",
     imgs: {
       thumbnails: [
         "/images/products/candles-bg-09.png",
@@ -34,6 +40,12 @@ const shopData: Product[] = [
     sale: "SALE 10% OFF",
     rating: 4.2,
     status: "available",
+    brand: "Scanlested",
+    model: "Itaewon 56",
+    size: "100gr",
+    type: "Hương mật ong, hương vani.",
+    specifications: "Sáp ong tự nhiên, hương dịu nhẹ.",
+    care: "Tránh gió mạnh, tắt nến khi không dùng.",
     imgs: {
       thumbnails: [
         "/images/products/candles-bg-03.png",
@@ -56,6 +68,12 @@ const shopData: Product[] = [
     sale: "SALE 15% OFF",
     rating: 4.5,
     status: "available",
+    brand: "Scanlested",
+    model: "Itaewon 57",
+    size: "100ml",
+    type: "Hương gỗ đàn hương, hương tuyết tùng.",
+    specifications: "Hương gỗ tự nhiên, không gây dị ứng.",
+    care: "Để xa tầm tay trẻ em.",
     imgs: {
       thumbnails: [
         "/images/products/candles-bg-13.png",
@@ -78,6 +96,12 @@ const shopData: Product[] = [
     sale: "SALE 5% OFF",
     rating: 4.0,
     status: "out of stock",
+    brand: "Scanlested",
+    model: "Itaewon 58",
+    size: "100gr",
+    type: "Hương cam, hương quế.",
+    specifications: "Thiết kế sang trọng, hương thơm lâu.",
+    care: "Bảo quản nơi thoáng mát.",
     imgs: {
       thumbnails: [
         "/images/products/candles-bg-14.png",
