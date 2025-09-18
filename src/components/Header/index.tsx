@@ -325,6 +325,29 @@ const Header = () => {
 
                 <li className="py-4">
                   <Link
+                    href="/shop"
+                    className="flex items-center gap-1.5 font-medium text-custom-sm text-dark hover:text-blue"
+                  >
+                    {/* Icon BestSeller (ví dụ ngôi sao vàng) */}
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="fill-current"
+                    >
+                      <path
+                        d="M8 1.5L10.09 6.26L15 6.91L11.5 10.14L12.36 15L8 12.77L3.64 15L4.5 10.14L1 6.91L5.91 6.26L8 1.5Z"
+                        fill="#FBBF24"
+                      />
+                    </svg>
+                    BestSeller
+                  </Link>
+                </li>
+
+                <li className="py-4">
+                  <Link
                     href="/wishlist"
                     className="flex items-center gap-1.5 font-medium text-custom-sm text-dark hover:text-blue"
                   >

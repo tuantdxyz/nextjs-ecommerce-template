@@ -72,9 +72,9 @@ const Categories = () => {
                 </svg>
                 Categories
               </span>
-              <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+              {/* <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
                 Browse by Category
-              </h2>
+              </h2> */}
             </div>
 
             <div className="flex items-center gap-3">

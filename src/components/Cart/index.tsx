@@ -13,9 +13,12 @@ const Cart = () => {
   return (
     <>
       {/* <!-- ===== Breadcrumb Section Start ===== --> */}
-      <section>
+      {/* <section>
         <Breadcrumb title={"Cart"} pages={["Cart"]} />
-      </section>
+      </section> */}
+
+      <div className="h-20"></div>
+      <div className="w-full h-1 my-6 bg-gradient-to-r from-blue-400 via-white to-blue-400 rounded-full"></div>
       {/* <!-- ===== Breadcrumb Section End ===== --> */}
       {cartItems.length > 0 ? (
         <section className="overflow-hidden py-20 bg-gray-2">

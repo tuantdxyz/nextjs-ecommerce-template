@@ -2,46 +2,41 @@ import { Testimonial } from "@/types/testimonial";
 
 const testimonialsData: Testimonial[] = [
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Davis Dorwart",
+    review:
+      "Hương thơm dễ chịu, tạo cảm giác thư giãn ngay khi bước vào phòng.",
+    authorName: "Nguyễn Minh Anh",
     authorImg: "/images/users/user-01.jpg",
-    authorRole: "Serial Entrepreneur",
+    authorRole: "",
   },
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Wilson Dias",
+    review: "Nến cháy lâu, mùi hương lan tỏa nhẹ nhàng và không gây khó chịu.",
+    authorName: "Trần Quốc Bảo",
     authorImg: "/images/users/user-02.jpg",
-    authorRole: "Backend Developer",
+    authorRole: "",
   },
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Miracle Exterm",
+    review: "Thiết kế tinh tế, rất phù hợp để làm quà tặng.",
+    authorName: "Lê Thị Hồng",
     authorImg: "/images/users/user-03.jpg",
-    authorRole: "Serial Entrepreneur",
+    authorRole: "",
   },
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Thomas Frank",
+    review: "Mùi hương tự nhiên, giúp giảm căng thẳng sau ngày dài làm việc.",
+    authorName: "Phạm Văn Hùng",
     authorImg: "/images/users/user-01.jpg",
-    authorRole: "Entrepreneur",
+    authorRole: "",
   },
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Dave Smith",
+    review: "Chất lượng vượt mong đợi, đáng để thử nhiều mùi khác nhau.",
+    authorName: "Vũ Thanh Tâm",
     authorImg: "/images/users/user-02.jpg",
-    authorRole: "Serial Entrepreneur",
+    authorRole: "",
   },
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Davis Dorwart",
+    review: "Không gian trở nên ấm cúng hơn nhờ ánh sáng và hương thơm từ nến.",
+    authorName: "Đặng Thảo My",
     authorImg: "/images/users/user-03.jpg",
-    authorRole: "Serial Entrepreneur",
+    authorRole: "",
   },
 ];
 

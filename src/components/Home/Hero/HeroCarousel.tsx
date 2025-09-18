@@ -42,15 +42,15 @@ const HeroCarousal = () => {
             </h1>
 
             <p>
-            Fill the room with the opulence of an English ballroom adorned with peonies in full bloom.
+            Hương cam bergamot tươi mát, được bao bọc bởi nét mộc mạc của gỗ và sự thoảng nhẹ của xạ hương huyền ảo.
             </p>
 
-            <a
+            {/* <a
               href="#"
               className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
             >
               Shop Now
-            </a>
+            </a> */}
           </div>
 
           <div>
@@ -83,7 +83,7 @@ const HeroCarousal = () => {
             </h1>
 
             <p>
-              Fill the room with the resinous scent of the Namibian myrrh tree mingling with the warm, lush notes of tonka bean.
+              Cam chín mọng và quýt đường tươi tắn lan tỏa trên nền hương ấm áp của hoắc hương đất và gỗ tuyết tùng mới cắt.
             </p>
 
             <a

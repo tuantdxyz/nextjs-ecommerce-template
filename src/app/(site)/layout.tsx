@@ -28,8 +28,8 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body>
+    <html lang="vi" suppressHydrationWarning={true}>
+      <body className="font-sans">
         {loading ? (
           <PreLoader />
         ) : (

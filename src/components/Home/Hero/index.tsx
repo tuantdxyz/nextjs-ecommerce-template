@@ -38,10 +38,10 @@ const Hero = () => {
                       </p>
                       <span className="flex items-center gap-3">
                         <span className="font-medium text-heading-5 text-red">
-                          $299
+                          $99
                         </span>
                         <span className="font-medium text-2xl text-dark-4 line-through">
-                          $99
+                          $199
                         </span>
                       </span>
                     </div>
@@ -70,10 +70,10 @@ const Hero = () => {
                       </p>
                       <span className="flex items-center gap-3">
                         <span className="font-medium text-heading-5 text-red">
-                          $99
+                          $39
                         </span>
                         <span className="font-medium text-2xl text-dark-4 line-through">
-                          $39
+                          $99
                         </span>
                       </span>
                     </div>

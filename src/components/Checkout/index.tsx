@@ -7,11 +7,20 @@ import ShippingMethod from "./ShippingMethod";
 import PaymentMethod from "./PaymentMethod";
 import Coupon from "./Coupon";
 import Billing from "./Billing";
+import { useAppSelector } from "@/redux/store";
+import { selectTotalPrice } from "@/redux/features/cart-slice";
+import { useSelector } from "react-redux";
 
 const Checkout = () => {
+  const cartItems = useAppSelector((state) => state.cartReducer.items);
+  const totalPrice = useSelector(selectTotalPrice);
+
   return (
     <>
-      <Breadcrumb title={"Checkout"} pages={["checkout"]} />
+      {/* <Breadcrumb title={"Checkout"} pages={["checkout"]} /> */}
+      <div className="h-20"></div>
+      <div className="w-full h-1 my-6 bg-gradient-to-r from-blue-400 via-white to-blue-400 rounded-full"></div>
+      
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <form>
@@ -19,13 +28,13 @@ const Checkout = () => {
               {/* <!-- checkout left --> */}
               <div className="lg:max-w-[670px] w-full">
                 {/* <!-- login box --> */}
-                <Login />
+                {/* <Login /> */}
 
                 {/* <!-- billing details --> */}
                 <Billing />
 
                 {/* <!-- address box two --> */}
-                <Shipping />
+                {/* <Shipping /> */}
 
                 {/* <!-- others note box --> */}
                 <div className="bg-white shadow-1 rounded-[10px] p-4 sm:p-8.5 mt-7.5">
@@ -69,44 +78,18 @@ const Checkout = () => {
                     </div>
 
                     {/* <!-- product item --> */}
-                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
-                      <div>
-                        <p className="text-dark">iPhone 14 Plus , 6/128GB</p>
+                    {cartItems.map((item, key) => (
+                      <div key={key} className="flex items-center justify-between py-5 border-b border-gray-3">
+                        <div>
+                          <p className="text-dark">{item.title}</p>
+                        </div>
+                        <div>
+                          <p className="text-dark text-right">
+                            ${item.discountedPrice * item.quantity}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-dark text-right">$899.00</p>
-                      </div>
-                    </div>
-
-                    {/* <!-- product item --> */}
-                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
-                      <div>
-                        <p className="text-dark">Asus RT Dual Band Router</p>
-                      </div>
-                      <div>
-                        <p className="text-dark text-right">$129.00</p>
-                      </div>
-                    </div>
-
-                    {/* <!-- product item --> */}
-                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
-                      <div>
-                        <p className="text-dark">Havit HV-G69 USB Gamepad</p>
-                      </div>
-                      <div>
-                        <p className="text-dark text-right">$29.00</p>
-                      </div>
-                    </div>
-
-                    {/* <!-- product item --> */}
-                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
-                      <div>
-                        <p className="text-dark">Shipping Fee</p>
-                      </div>
-                      <div>
-                        <p className="text-dark text-right">$15.00</p>
-                      </div>
-                    </div>
+                    ))}
 
                     {/* <!-- total --> */}
                     <div className="flex items-center justify-between pt-5">
@@ -115,7 +98,7 @@ const Checkout = () => {
                       </div>
                       <div>
                         <p className="font-medium text-lg text-dark text-right">
-                          $1072.00
+                          ${totalPrice}
                         </p>
                       </div>
                     </div>
@@ -126,7 +109,7 @@ const Checkout = () => {
                 <Coupon />
 
                 {/* <!-- shipping box --> */}
-                <ShippingMethod />
+                {/* <ShippingMethod /> */}
 
                 {/* <!-- payment box --> */}
                 <PaymentMethod />

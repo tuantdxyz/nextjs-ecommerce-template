@@ -31,7 +31,7 @@ const ShopDetails = ({ product }) => {
       dispatch(
         addItemToWishlist({
           ...product,
-          status: "available",
+          // status: "available",
           quantity: 1,
         })
       );
@@ -124,7 +124,10 @@ const ShopDetails = ({ product }) => {
 
   return (
     <>
-      <Breadcrumb title={"Shop Details"} pages={["shop details"]} />
+      {/* <Breadcrumb title={"Shop Details"} pages={["shop details"]} /> */}
+
+      <div className="h-20"></div>
+      <div className="w-full h-1 my-6 bg-gradient-to-r from-blue-400 via-white to-blue-400 rounded-full"></div>
 
       {product.title === "" ? (
         "Please add product"
@@ -353,7 +356,7 @@ const ShopDetails = ({ product }) => {
                       {" "}
                     </span>
                     <span className="text-red">
-                       ${product.discountedPrice}
+                      ${product.discountedPrice}
                     </span>
                   </h3>
 
@@ -583,7 +586,7 @@ const ShopDetails = ({ product }) => {
                     </h2>
 
                     <p className="mb-6">
-                     {product.care}
+                      {product.care}
                     </p>
                   </div>
                 </div>

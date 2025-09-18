@@ -12,6 +12,7 @@ import Image from "next/image";
 
 const SingleGridItem = ({ item }: { item: Product }) => {
   const { openModal } = useModalContext();
+  // console.log(item.title, item.status);
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -34,7 +35,7 @@ const SingleGridItem = ({ item }: { item: Product }) => {
     dispatch(
       addItemToWishlist({
         ...item,
-        status: "available",
+        // status: item.status,
         quantity: 1,
       })
     );
@@ -78,12 +79,55 @@ const SingleGridItem = ({ item }: { item: Product }) => {
             </svg>
           </button>
 
-          <button
+          {/* <button
             onClick={() => handleAddToCart()}
             className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-blue text-white ease-out duration-200 hover:bg-blue-dark"
           >
             Add to cart
-          </button>
+          </button> */}
+
+          {item.status === "available" ? (
+            <button
+              onClick={() => handleAddToCart()}
+              className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-blue text-white ease-out duration-200 hover:bg-blue-dark"
+              // style={{ minWidth: 150 }}
+            >
+              Add to Cart
+            </button>
+          ) : (
+            <div className="inline-flex font-medium text-custom-sm py-[7px] px-2 rounded-[5px] text-white">
+              <button
+                onClick={() => window.open("https://zalo.me/+84846179163", "_blank")}
+                className="inline-flex justify-center items-center p-2 rounded-md w-full group"
+                // style={{ minWidth: 28 }}
+                // aria-label="Liên hệ Zalo"
+                type="button"
+              >
+                <Image
+                  src="/images/icons/icons-zalo.svg"
+                  alt="Liên hệ Zalo"
+                  width={28}
+                  height={28}
+                  className="transition-transform duration-200 group-hover:scale-125"
+                />
+              </button>
+              <button
+                onClick={() => window.open("tel:+84846179163")}
+                className="inline-flex justify-center items-center p-2 rounded-md w-full group"
+                // style={{ minWidth: 28 }}
+                // aria-label="Gọi điện"
+                type="button"
+              >
+                <Image
+                  src="/images/icons/icons-call.svg"
+                  alt="Gọi điện"
+                  width={28}
+                  height={28}
+                  className="transition-transform duration-200 group-hover:scale-125"
+                />
+              </button>
+            </div>
+          )}
 
           <button
             onClick={() => handleItemToWishList()}
@@ -148,7 +192,8 @@ const SingleGridItem = ({ item }: { item: Product }) => {
       </div>
 
       <h3 className="font-medium text-dark ease-out duration-200 hover:text-blue mb-1.5">
-        <Link href="/shop-details"> {item.title} </Link>
+        {/* <Link href="/shop-details"> {item.title} </Link> */}
+        <Link href={`/products/${item.slug}`}>{item.title}</Link>
       </h3>
 
       <span className="flex items-center gap-2 font-medium text-lg">

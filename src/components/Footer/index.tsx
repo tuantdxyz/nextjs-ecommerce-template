@@ -32,7 +32,7 @@ const Footer = () => {
                     />
                   </svg>
                 </span>
-                685 Market Street,Las Vegas, LA 95820,United States.
+                999 Phố Mễ Trì, Hà Nội.
               </li>
 
               <li>
@@ -61,7 +61,7 @@ const Footer = () => {
                       fill="#3C50E0"
                     />
                   </svg>
-                  (+099) 532-786-9843
+                  (+084) 846-179-163
                 </a>
               </li>
 
@@ -113,7 +113,7 @@ const Footer = () => {
                 </svg>
               </a>
 
-              <a
+              {/* <a
                 href="#"
                 aria-label="Twitter Social Link"
                 className="flex ease-out duration-200 hover:text-blue"
@@ -131,7 +131,7 @@ const Footer = () => {
                     fill=""
                   />
                 </svg>
-              </a>
+              </a> */}
 
               <a
                 href="#"
@@ -168,7 +168,7 @@ const Footer = () => {
                 </svg>
               </a>
 
-              <a
+              {/* <a
                 href="#"
                 aria-label="Linkedin Social Link"
                 className="flex ease-out duration-200 hover:text-blue"
@@ -191,7 +191,7 @@ const Footer = () => {
                     fill=""
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
             {/* <!-- Social Links end --> */}
           </div>
@@ -202,7 +202,7 @@ const Footer = () => {
             </h2>
 
             <ul className="flex flex-col gap-3.5">
-              <li>
+              {/* <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
                   My Account
                 </a>
@@ -211,7 +211,7 @@ const Footer = () => {
                 <a className="ease-out duration-200 hover:text-blue" href="#">
                   Login / Register
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
                   Cart
@@ -246,34 +246,34 @@ const Footer = () => {
                   Refund Policy
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
                   Terms of Use
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
                   FAQ’s
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
                   Contact
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           <div className="w-full sm:w-auto">
             <h2 className="mb-7.5 text-custom-1 font-medium text-dark lg:text-right">
-              Download App
+              Partnership
             </h2>
 
             <p className="lg:text-right text-custom-sm mb-4">
-              Save $3 With App & New User only
+              Contact via hotline
             </p>
 
-            <ul className="flex flex-col lg:items-end gap-3">
+            {/* <ul className="flex flex-col lg:items-end gap-3">
               <li>
                 <a
                   className="inline-flex items-center gap-3 py-[9px] pl-4 pr-7.5 text-white rounded-md bg-dark ease-out duration-200 hover:bg-opacity-95"
@@ -327,7 +327,7 @@ const Footer = () => {
                   </div>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
         {/* <!-- footer menu end --> */}
@@ -338,7 +338,7 @@ const Footer = () => {
         <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-5 flex-wrap items-center justify-between">
             <p className="text-dark font-medium">
-              &copy; {year}. All rights reserved by PimjoLabs.
+              &copy; {year}. All rights reserved by TuanTD.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -361,7 +361,7 @@ const Footer = () => {
                     height={21}
                   />
                 </a>
-                <a href="#" aria-label="payment system with master card">
+                {/* <a href="#" aria-label="payment system with master card">
                   <Image
                     src="/images/payment/payment-03.svg"
                     alt="master card"
@@ -384,7 +384,7 @@ const Footer = () => {
                     width={56}
                     height={22}
                   />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
