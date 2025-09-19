@@ -71,6 +71,9 @@ const Cart = () => {
         </section>
       ) : (
         <>
+          <div className="h-20"></div>
+          <div className="w-full h-1 my-6 bg-gradient-to-r from-blue-400 via-white to-blue-400 rounded-full"></div>
+
           <div className="text-center mt-8">
             <div className="mx-auto pb-7.5">
               <svg
@@ -103,13 +106,14 @@ const Cart = () => {
               </svg>
             </div>
 
-            <p className="pb-6">Your cart is empty!</p>
+            <p className="pb-6">Giỏ hàng của bạn đang trống!</p>
 
             <Link
-              href="/shop-with-sidebar"
+              href="/shop"
+              // href="/shop-with-sidebar"
               className="w-96 mx-auto flex justify-center font-medium text-white bg-dark py-[13px] px-6 rounded-md ease-out duration-200 hover:bg-opacity-95"
             >
-              Continue Shopping
+              Tiếp tục Mua sắm
             </Link>
           </div>
         </>
