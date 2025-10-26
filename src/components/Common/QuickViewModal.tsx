@@ -13,8 +13,9 @@ import { addItemToWishlist } from "@/redux/features/wishlist-slice";
 
 const QuickViewModal = () => {
   const { isModalOpen, closeModal } = useModalContext();
-  const { openPreviewModal } = usePreviewSlider();
+  // const { openPreviewModal } = usePreviewSlider();
   const [quantity, setQuantity] = useState(1);
+  const [activePreview, setActivePreview] = useState(0);
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -22,15 +23,13 @@ const QuickViewModal = () => {
   const product = useAppSelector((state) => state.quickViewReducer.value);
 
   if (!product) return null;
-
-  const [activePreview, setActivePreview] = useState(0);
-
+  
   // preview modal
-  const handlePreviewSlider = () => {
-    dispatch(setProductDetails(product));
+  // const handlePreviewSlider = () => {
+  //   dispatch(setProductDetails(product));
 
-    openPreviewModal();
-  };
+  //   openPreviewModal();
+  // };
 
   // add to cart
   const handleAddToCart = () => {
@@ -44,38 +43,38 @@ const QuickViewModal = () => {
     closeModal();
   };
 
-  const handleItemToWishList = () => {
-      dispatch(
-        addItemToWishlist({
-          id: product.id,
-          title: product.title,
-          price: product.price,
-          discountedPrice: product.discountedPrice,
-          quantity: 1,
-          imgs: product.imgs,
-          status: product.status,
-        })
-      );
-    };
+  // const handleItemToWishList = () => {
+  //     dispatch(
+  //       addItemToWishlist({
+  //         id: product.id,
+  //         title: product.title,
+  //         price: product.price,
+  //         discountedPrice: product.discountedPrice,
+  //         quantity: 1,
+  //         imgs: product.imgs,
+  //         status: product.status,
+  //       })
+  //     );
+  //   };
 
-  useEffect(() => {
-    // closing modal while clicking outside
-    function handleClickOutside(event) {
-      if (!event.target.closest(".modal-content")) {
-        closeModal();
-      }
-    }
+  // useEffect(() => {
+  //   // closing modal while clicking outside
+  //   // function handleClickOutside(event) {
+  //   //   if (!event.target.closest(".modal-content")) {
+  //   //     closeModal();
+  //   //   }
+  //   // }
 
-    if (isModalOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+  //   if (isModalOpen) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   }
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
 
-      setQuantity(1);
-    };
-  }, [isModalOpen, closeModal]);
+  //     setQuantity(1);
+  //   };
+  // }, [isModalOpen, closeModal]);
 
   return (
     <div
