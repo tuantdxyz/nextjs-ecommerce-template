@@ -1,0 +1,118 @@
+import { Product } from "@/types/product";
+
+const shopData: Product[] = [
+  {
+    id: 1,
+    title: "Candles Itaewon 55",
+    slug: "candles-itaewon-55",
+    reviews: 15,
+    price: 59.0,
+    discountedPrice: 29.0,
+    description: "Nến thơm hương hoa nhẹ nhàng, thích hợp cho phòng ngủ.",
+    sale: "SALE 20% OFF",
+    rating: 4.7,
+    status: "available",
+    brand: "Scanlested",
+    model: "Itaewon 55",
+    size: "100ml",
+    type: "Hương hoa nhài, hương hoa hồng.",
+    specifications: "Thành phần tự nhiên, cháy 30 giờ.",
+    care: "Đặt nơi khô ráo, tránh ánh nắng.",
+    imgs: {
+      thumbnails: [
+        "/images/products/candles-bg-09.png",
+        "/images/products/candles-bg-10.png",
+      ],
+      previews: [
+        "/images/products/candles-bg-09.png",
+        "/images/products/candles-bg-10.png",
+      ],
+    },
+  },
+  {
+    id: 2,
+    title: "Candles Itaewon 56",
+    slug: "candles-itaewon-56",
+    reviews: 5,
+    price: 899.0,
+    discountedPrice: 99.0,
+    description: "Nến thơm cao cấp, thời gian cháy lâu, an toàn cho sức khỏe.",
+    sale: "SALE 10% OFF",
+    rating: 4.2,
+    status: "available",
+    brand: "Scanlested",
+    model: "Itaewon 56",
+    size: "100gr",
+    type: "Hương mật ong, hương vani.",
+    specifications: "Sáp ong tự nhiên, hương dịu nhẹ.",
+    care: "Tránh gió mạnh, tắt nến khi không dùng.",
+    imgs: {
+      thumbnails: [
+        "/images/products/candles-bg-03.png",
+        "/images/products/candles-bg-04.png",
+      ],
+      previews: [
+        "/images/products/candles-bg-03.png",
+        "/images/products/candles-bg-04.png",
+      ],
+    },
+  },
+  {
+    id: 3,
+    title: "Candles Itaewon 57",
+    slug: "candles-itaewon-57",
+    reviews: 8,
+    price: 59.0,
+    discountedPrice: 29.0,
+    description: "Nến thơm hương gỗ, tạo cảm giác thư giãn.",
+    sale: "SALE 15% OFF",
+    rating: 4.5,
+    status: "available",
+    brand: "Scanlested",
+    model: "Itaewon 57",
+    size: "100ml",
+    type: "Hương gỗ đàn hương, hương tuyết tùng.",
+    specifications: "Hương gỗ tự nhiên, không gây dị ứng.",
+    care: "Để xa tầm tay trẻ em.",
+    imgs: {
+      thumbnails: [
+        "/images/products/candles-bg-13.png",
+        "/images/products/candles-bg-13.png",
+      ],
+      previews: [
+        "/images/products/candles-bg-13.png",
+        "/images/products/candles-bg-13.png",
+      ],
+    },
+  },
+  {
+    id: 4,
+    title: "Candles Itaewon 58",
+    slug: "candles-itaewon-58",
+    reviews: 6,
+    price: 59.0,
+    discountedPrice: 29.0,
+    description: "Nến thơm thiên nhiên, thích hợp làm quà tặng.",
+    sale: "SALE 5% OFF",
+    rating: 4.0,
+    status: "out of stock",
+    brand: "Scanlested",
+    model: "Itaewon 58",
+    size: "100gr",
+    type: "Hương cam, hương quế.",
+    specifications: "Thiết kế sang trọng, hương thơm lâu.",
+    care: "Bảo quản nơi thoáng mát.",
+    imgs: {
+      thumbnails: [
+        "/images/products/candles-bg-14.png",
+        "/images/products/candles-bg-14.png",
+      ],
+      previews: [
+        "/images/products/candles-bg-14.png",
+        "/images/products/candles-bg-14.png",
+      ],
+    },
+  },
+];
+
+export default shopData;
