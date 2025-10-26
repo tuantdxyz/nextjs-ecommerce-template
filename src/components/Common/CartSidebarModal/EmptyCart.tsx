@@ -4,9 +4,6 @@ import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
 
 const EmptyCart = () => {
   const { closeCartModal } = useCartModalContext();
-
-  
-
   return (
     <div className="text-center">
       <div className="mx-auto pb-7.5">
